@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
+import os
 
 root = 'https://subslikescript.com'
 website = f'{root}/movies_letter-A'
@@ -39,7 +40,7 @@ for page in range(1, int(last_page)+1)[:2]:
             title = box.find('h1').get_text()
             transcript = box.find('div', class_='full-script').get_text(strip=True, separator=' ')
 
-            with open(f'{title}.txt', 'w') as file:
+            with open(f'scraped_data/{title}.txt', 'w') as file:
                 file.write(transcript)
         except:
             print('Link not working' + link)
