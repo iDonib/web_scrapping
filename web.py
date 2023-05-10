@@ -45,6 +45,8 @@ for page in range(1, int(last_page)+1)[:2]:
         except:
             print('Link not working' + link)
 
+            
+            
     
 
 
