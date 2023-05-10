@@ -44,6 +44,8 @@ for page in range(1, int(last_page)+1)[:2]:
                 file.write(transcript)
         except:
             print('Link not working' + link)
+            
+            
 
     
 
